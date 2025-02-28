@@ -1,0 +1,1 @@
+C doesnt have boolean or string data type
