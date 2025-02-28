@@ -1,10 +1,11 @@
+//Area of Square
 #include <stdio.h>
 
 int main()
 {
-    int side;
+    float side;
     printf("Please Enter Side of Square = \n");
-    scanf("%d",&side);
-    printf("The area of Square = %d",side*side);
+    scanf("%f",&side);
+    printf("The area of Square = %f",side*side);
     return 0;
 }
