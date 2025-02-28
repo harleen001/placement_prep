@@ -1,1 +1,14 @@
 C doesnt have boolean or string data type
+
+32 keywords in C, reserved words
+
+#include <stdio.h> ---> PREPROCESSOR DIRECTIVE
+
+EXECUTION IS CARRIED OUT LINE BY LINE
+
+return 0; AT LAST SHOWS RETURN 0 ERRORS
+
+way of next LINE
+    printf("age is %d\n",_age); //integers
+    printf("value of pie is %f\n",pi); // real numbers
+    printf("star look like this %c\n",star); //characters
