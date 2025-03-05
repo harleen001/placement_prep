@@ -1,0 +1,105 @@
+<!--Problem Statement:
+Design a traffic light that changes colors at specific time intervals and continues this cycle infinitely.
+You may be required to implement this using pure vanilla JavaScript.
+This problem evaluates your understanding of DOM manipulation, state management and the use of setTimeout.
+
+
+
+
+
+JavaScript:
+We will use setInterval to cycle through the colors at regular intervals.
+We will manage the state of the traffic light by adding/removing a class to change the color.
+Ensure the light continuously cycles through the states (red → yellow → green → back to red).
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traffic Light</title>
+  <style>
+    .traffic-light {
+      width: 100px;
+      height: 300px;
+      background-color: #333;
+      border-radius: 10px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .light {
+      width: 80px;
+      height: 80px;
+      background-color: #444;
+      border-radius: 50%;
+      margin: 10px auto;
+    }
+
+    .red {
+      background-color: red;
+    }
+
+    .yellow {
+      background-color: yellow;
+    }
+
+    .green {
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="traffic-light" id="trafficLight">
+    <div class="light" id="redLight"></div>
+    <div class="light" id="yellowLight"></div>
+    <div class="light" id="greenLight"></div>
+  </div>
+
+  <script>
+    // Get traffic light elements
+    const redLight = document.getElementById('redLight');
+    const yellowLight = document.getElementById('yellowLight');
+    const greenLight = document.getElementById('greenLight');
+
+    // Function to reset all lights to their off state
+    function resetLights() {
+      redLight.classList.remove('red');
+      yellowLight.classList.remove('yellow');
+      greenLight.classList.remove('green');
+    }
+
+    // Function to change traffic light in sequence
+    function changeLight() {
+      resetLights(); // Reset all lights
+
+      // First, turn on the red light
+      redLight.classList.add('red');
+
+      // After 3 seconds, switch to yellow light
+      setTimeout(() => {
+        resetLights();
+        yellowLight.classList.add('yellow');
+      }, 3000);
+
+      // After 1 second, switch to green light
+      setTimeout(() => {
+        resetLights();
+        greenLight.classList.add('green');
+      }, 4000);
+
+      // After 3 seconds, switch back to red light and loop
+      setTimeout(changeLight, 7000); // 7 seconds is the total duration of the cycle
+    }
+
+    // Start the traffic light cycle
+    changeLight();
+  </script>
+
+</body>
+</html>
