@@ -1,0 +1,43 @@
+1. Sliding window-> used in arrays/strings when you want
+to analyse a specific subsection
+
+start with fixed window, then left subtract and
+right element add, 
+time complexity--->o(n) solved in one loop
+
+2. Two pointer--> analyse array/string specific segments
+for ex-> check is a string is palindrome or not, 
+one pointer at start another at end
+time complexity-->o(n)
+
+3. Modified binary search 
+in a rotated sorted array find 0
+check if element in unsorted(right) if not then in sorted
+tc->log(n)
+
+4. Binary tree BFS 
+you need to print every level of a binary tree
+add root node to queue then deque it and start adding root nodes to queue
+until queue becomes empty
+
+5.Binary tree DFS
+traverse each branch(pre order traversal ROOT LEFT RIGHT)
+it is used when we need to traverse every element
+
+6.top K element
+used to find top K element of dataset, in an array you need 3
+largest number, use heap
+put first 3 in heap then trverse array if any no. bigger than heap
+then replace
+time com-->o(k log n)
+
+7. subset problem
+{1,2,3}-->generate all power subsets of this array
+use backtrack and recursion here
+in permutation and combination problems
+
+8. fast and slow pointer , used very much in linked lists
+to check if cycle in ll or not, also used in finding middle node of ll
+
+BACKTRACKING-->sudoku/n queen
+if path valid then okay else move back
