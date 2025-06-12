@@ -18,3 +18,6 @@ int main()
     return 0;
 }
 // &num--> call by refernce, pointer of original value
+
+// you dont need to specify & with an array as &arr[i]
+//as array always goes with reference
