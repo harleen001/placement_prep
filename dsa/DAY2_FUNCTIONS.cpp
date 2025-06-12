@@ -13,7 +13,7 @@ void printParameterizedName(string name)
     cout<<"hello"<<name;
 }
 //take two numbers and print its sum
-int numbersum(int a, int b)
+int numbersum(int a, int b)//int type fn,returns an int value
 {
     int c;
     c=a+b;
@@ -22,9 +22,15 @@ int numbersum(int a, int b)
 int main()
 {
     printName();
-    string name;
-    cin>>name;
+  //  string name;
+  //  cin>>name;
    // printParameterizedName(name);
     cout<<numbersum(5,6);
+    
+    //BUILT IN MINUMUM NUMBER, also max
+    int num1,num2;
+    cin>>num1>>num2;
+    int minimum=min(num1,num2);
+    cout<<minimum;
     return 0;
 }
