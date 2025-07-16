@@ -29,6 +29,25 @@ void insertLast(Node* &head,int data) //lastinsert
     
         temp->next=lastinsert;
 }
+
+void insertatK(Node* head, int data, int k)
+{
+    Node* temp=head;
+    Node* newelement=new Node(data);
+    int count =1;
+    while(count<k-1 && temp!=NULL)
+    {
+        temp= temp->next;
+        count++;
+    }
+    if(temp==NULL)
+    {
+        return;
+    }
+newelement->next=temp->next;  
+temp->next=newelement; 
+
+}
 void Display(Node* head)//display element
 {
      Node* temp=head;
@@ -50,12 +69,12 @@ int main()
    Display(n1);
 
    
-    insertHead(n1,5);
-    Display(n1);
-    insertLast(n1,70);
-    Display(n1);
-   
-
+    // insertHead(n1,5);
+    // Display(n1);
+    // insertLast(n1,70);
+    // Display(n1);
+   insertatK(n1,30,3);
+Display(n1);//done
 
     return 0;
 }
