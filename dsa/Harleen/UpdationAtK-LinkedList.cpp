@@ -65,6 +65,20 @@ void deletionatlast(Node* &head)
     free(last);
     
 }
+
+void deletionatK(Node* &head,int k)
+{
+Node* temp=head;
+int count=1;
+while(count<k-1)
+{
+temp=temp->next;
+count++;
+}
+Node* freeable=temp->next;
+temp->next=temp->next->next;
+free(freeable);
+}
 int main()
 {
     Node* n1=new Node(10);
@@ -73,8 +87,11 @@ int main()
     insertatLast(n1,40);
     updateK(n1,3,30);
     display(n1);
-    deletionatstart(n1);
+    // deletionatstart(n1);
+    // display(n1);
+    // deletionatlast(n1);
+    // display(n1);
+    deletionatK(n1,3);
     display(n1);
-    deletionatlast(n1);
-    display(n1);
+  
 }
