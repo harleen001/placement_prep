@@ -46,13 +46,35 @@ void updateK(Node* &head,int k,int newvalue)
     temp->next->value=newvalue;
 
 }
+void deletionatstart(Node* &head)
+{
+    Node* temp=head;
+    head=head->next;
+   free(temp); //to free memory
+
+}
+void deletionatlast(Node* &head)
+{
+    Node* temp=head;
+    while(temp->next->next!=NULL)
+    {
+        temp=temp->next;
+    }//next ka next leke usko null krdia aur then freed up memory
+    Node *last=temp->next;
+    temp->next=NULL;
+    free(last);
+    
+}
 int main()
 {
     Node* n1=new Node(10);
     insertatLast(n1,20);
     insertatLast(n1,40);
     insertatLast(n1,40);
-    display(n1);
     updateK(n1,3,30);
+    display(n1);
+    deletionatstart(n1);
+    display(n1);
+    deletionatlast(n1);
     display(n1);
 }
