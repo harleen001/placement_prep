@@ -19,6 +19,18 @@ stack<int> copystack(stack<int> &st)
     cout<<result.top();
     return result;
 }
+
+void recursioncall(stack<int>&st,stack<int>&res)
+{
+    if(st.empty())
+    {
+        return;
+    }
+    int curr=st.top();
+    st.pop();
+    recursioncall(st,res);
+    res.push(curr);
+}
 int main()
 
 {
@@ -27,6 +39,14 @@ int main()
     st.push(2);
     st.push(3);
     st.push(4);
-    copystack(st);
+    // copystack(st);
+
+    stack<int> result;
+    recursioncall(st,result);
+    while(result.top()!=-1)
+    {
+        cout<<result.top();
+        result.pop();
+    }
     return 0;
 }
