@@ -3,7 +3,7 @@ using namespace std;
 
 int powerrecursion(int p,int q)
 {
-    if(q==1)
+    if(q==0)
     {
         return 1;
     }
