@@ -13,4 +13,11 @@
 
 //best case, avg case, worst case, when program takes least amount of time in code execution it is best case
 // we donot consider constant as when talking of a million, a single integer dont hold any significance
-// other notations than big O, are thetha and omega
+// other notations than big O, are thetha and omega(lowest bound,best complexity)
+
+// for a loop inside loop= N X N = N^2
+// time complexity= O(N^2)
+// FOR INNER LOOP TO BE DECREASING AGAIN SAME
+
+//now space complexity--> memory space your computer takes
+//again using big O notation
